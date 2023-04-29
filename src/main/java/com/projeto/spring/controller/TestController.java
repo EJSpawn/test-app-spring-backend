@@ -12,7 +12,7 @@ import lombok.Data;
 
 @RestController
 @RequestMapping("/test")
-public class TestResource {
+public class TestController {
     
     @GetMapping("/items")
     public List<Item> getAllItems() {
