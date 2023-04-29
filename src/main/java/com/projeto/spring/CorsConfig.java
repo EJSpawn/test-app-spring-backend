@@ -38,7 +38,8 @@ public class CorsConfig implements WebMvcConfigurer {
 
   @Bean
 public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-      http.httpBasic(withDefaults());
+      http.csrf(withDefaults()).cors(withDefaults()).
+              httpBasic(withDefaults());
 	return http.build();
 }
 
